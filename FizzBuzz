@@ -1,0 +1,31 @@
+package de.entwicklerheld.fizzbuzz.challenge.stage1;
+import java.util.Scanner;
+class FizzBuzz {
+	
+    static String fizzbuzz(int number) {
+        
+        String abc = "";
+
+        if ((number % 3 == 0) && (number % 5 == 0)) {
+            abc = "fizzbuzz";
+        }
+        else if ((number % 3 > 0) && (number % 5 == 0)) {
+            abc = "buzz";
+        }
+        else if ((number % 3 == 0) && (number % 5 > 0)) {
+            abc = "fizz";
+        }
+        else {
+            abc = Integer.toString(number);
+        }
+        
+        return abc;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        fizzbuzz(sc.nextInt());
+        sc.close();
+    }
+
+} 
